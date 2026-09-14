@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ResinByShikha | Handmade Resin Art</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff9fc;
+      color: #333;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #b84d91;
+    }
+
+    .cart-btn {
+      background: #b84d91;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #ffe8f4, #f5e8ff);
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      color: #9c3d7b;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .shop-btn {
+      display: inline-block;
+      background: #b84d91;
+      color: white;
+      text-decoration: none;
+      padding: 13px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 45px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #9c3d7b;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .product-image {
+      height: 210px;
+      background: linear-gradient(135deg, #f8d5e8, #ddd0ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #b84d91;
+      margin-bottom: 14px;
+    }
+
+    .add-btn {
+      width: 100%;
+      border: none;
+      background: #b84d91;
+      color: white;
+      padding: 11px;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .about {
+      text-align: center;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: auto;
+      color: #555;
+    }
+
+    footer {
+      background: #2d2630;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero {
+        padding: 55px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">resinbyshikha</div>
+
+    <button class="cart-btn">
+      🛒 Cart (<span id="cartCount">0</span>)
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Beautiful Handmade Resin Art</h1>
+
+    <p>
+      Unique handmade creations made with love ✨
+    </p>
+
+    <a href="#products" class="shop-btn">
+      Shop Now
+    </a>
+  </section>
+
+  <section class="section" id="products">
+
+    <h2>Our Products</h2>
+
+    <div class="products">
+
+      <div class="product">
+        <div class="product-image">
+          💎
+        </div>
+
+        <div class="product-info">
+          <h3>Resin Keychain</h3>
+
+          <div class="price">₹199</div>
+
+          <button class="add-btn" onclick="addToCart('Resin Keychain',199)">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+
+      <div class="product">
+        <div class="product-image">
+          🌸
+        </div>
+
+        <div class="product-info">
+          <h3>Resin Coaster Set</h3>
+
+          <div class="price">₹499</div>
+
+          <button class="add-btn" onclick="addToCart('Resin Coaster Set',499)">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+
+      <div class="product">
+        <div class="product-image">
+          🦋
+        </div>
+
+        <div class="product-info">
+          <h3>Resin Bookmark</h3>
+
+          <div class="price">₹249</div>
+
+          <button class="add-btn" onclick="addToCart('Resin Bookmark',249)">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+
+      <div class="product">
+        <div class="product-image">
+          ✨
+        </div>
+
+        <div class="product-info">
+          <h3>Custom Resin Art</h3>
+
+          <div class="price">₹799</div>
+
+          <button class="add-btn" onclick="addToCart('Custom Resin Art',799)">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+
+    <h2>About ResinByShikha</h2>
+
+    <p class="about">
+      Welcome to ResinByShikha!
+      We create beautiful handmade resin art products,
+      perfect for gifts, home decoration and special occasions.
+      Every piece is made with care and creativity.
+    </p>
+
+  </section>
+
+
+  <footer>
+    <p>© 2026 ResinByShikha</p>
+    <p>Handmade with ❤️</p>
+  </footer>
+
+
+  <script>
+
+    let cartCount = 0;
+
+    function addToCart(product, price) {
+
+      cartCount++;
+
+      document.getElementById("cartCount").innerText = cartCount;
+
+      alert(product + " added to cart!");
+
+    }
+
+  </script>
+
+</body>
+</html>
